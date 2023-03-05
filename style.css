@@ -1,0 +1,221 @@
+body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 690px){
+
+/* navbar-start */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.heading {
+    font-size: 4vh;
+    color: #00ABFF;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-weight: 2300;
+}
+
+        .hamburger {
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            margin-right: 2vh;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+.line {
+    display: block;
+        width: 3vh;
+        height: 2px;
+        background-color: #00ABFF;
+        position: absolute;
+        transform: translateY(-50%);
+        transition: all 0.2s ease-in-out;
+}
+
+.line:nth-child(1) {
+    top: 25%;
+    transform: translateY(-50%);
+}
+
+.line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line:nth-child(3) {
+    top: 75%;
+    transform: translateY(-50%);
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+.menu {
+    position: absolute;
+    margin-bottom: 80vh;
+    right: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: 1s;
+    padding-top: 25vh;
+    box-shadow: 0 2px 5px rgba(7, 7, 7, 0.2);
+}
+
+.menu.active {
+    display: block;
+    margin-bottom: 0vh;
+    margin-top: 15vh;
+    transition: all 0.5s ease-in-out;
+    backdrop-filter: blur(6px);
+}
+
+.menu.active .dots{
+    display: none;
+}
+
+.menu li {
+    display: block;
+    margin: 10px 0;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    color: #020202;
+    text-decoration: none;
+    width: 90%;
+    margin-left: 2.5vh;
+    text-transform: uppercase;
+    font-size: 1.8vh;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu li a:hover {
+    color: #00ABFF;
+}
+
+/* navbar-end */
+
+/* home-start */
+
+.home{
+    width: 100%;
+    height: 70vh;
+    background-color: #F9FBFF;
+}
+
+.home-heading{
+    font-size: 4.5vh;
+    font-family: 'Poppins', sans-serif;
+    color: #00ABFF;
+    font-weight: 2300;
+    margin-left: 3vh;
+    margin-top: 6vh;
+}
+
+.home-subheading{
+    font-size: 3.5vh;
+        font-family: 'Poppins', sans-serif;
+        color: black;
+        font-weight: 2300;
+        margin-left: 4.5vh;
+}
+
+.home-button{
+    width: 35%;
+    padding: 1.5vh;
+    font-size: 2vh;
+    position: relative;
+    border: none;
+    outline: none;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+    background: rgb(193, 255, 114);
+        background: linear-gradient(115deg, rgba(193, 255, 114, 1) 11%, rgba(83, 231, 246, 1) 54%, rgba(18, 163, 214, 1) 100%);
+        margin-left: 4.5vh;
+        border-radius: 4px;
+        margin-top: 1vh;
+                    transition: 0.2s ease-in;
+}
+
+.arrow{
+    margin-bottom: -7px;
+}
+
+.home-button:hover{
+    background: #0096e1;
+            transition: 0.2s ease-in-out;
+    transform: translateY(-10px);
+}
+
+.dots {
+    height: 17vh;
+    width: 27vh;
+    position: absolute;
+    background: radial-gradient(circle, #00ABFF 10%, transparent 11%);
+    background-size: 2.5em 2.5em;
+    background-color: #ffffff00;
+    z-index: 0;
+    margin-top: -7%;
+}
+
+.dots-1 {
+    height: 17vh;
+    width: 27vh;
+    position: absolute;
+    background: radial-gradient(circle, #00ABFF 10%, transparent 11%);
+    background-size: 2.5em 2.5em;
+    background-color: #ffffff00;
+    z-index: 0;
+    margin-top: -47%;
+    margin-left: 80%;
+}
+
+.hamburger.active .dots-1 {
+    display: none;
+}
+
+.menu.active .dots-1{
+    height: 0vh;
+    width: 0vh;
+}
+
+.dots.hidden {
+    display: none;
+}
+
+.dots-1.hidden {
+    display: none;
+}
+
+/* home-end */
+
+}
